@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let users = [];
+      function addUser() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let date = document.getElementById("date").value;
+        let user = {
+          name: name,
+          email: email,
+          password: password,
+          date: date,
+        };
+        users.push(user);
+        showLogin();
+      }
+      function chkUser() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        for (let i = 0; i < users.length; i++) {
+          if (users[i].email == email && users[i].password == password) {
+            let str = `
+            <div>welcome</div>
+            <p><button onclick="showLogin()">Logout</button></p>`;
+            root.innerHTML = str;
+            break
+          } else {
+            msg.innerHTML = "Access denied";
+          }
+        }
+      }
+      function showForm() {
+        let str = `
+      <div>
+        <h2>Create Account</h2>
+        <p><input type="text" placeholder="Enter Name" id="name"></p>
+        <p><input type="text" placeholder="Enter Email" id="email"></p>
+        <p><input type="password" placeholder="Enter Password" id="password"></p>
+        <p><input type="date" id="date"></p>
+        <button>Submit</button>
+        <p>Already a member?<button onclick="showLogin()">Login Here</button></p>
+      </div>`;
+        root.innerHTML = str;
+      }
+      function showLogin() {
+        let str = `
+      <div>
+        <h2>Login Form</h2>
+        <div id="msg"></div>
+        <p><input type="text" placeholder="Enter Email"></p>
+        <p><input type="password" placeholder="Enter Password"></p>
+        <button onclick="chkUser()">Log In</button>
+        </br>
+        <p><button onclick='showForm()'>Create Account</button></p>
+      </div>`;
+        root.innerHTML = str;
+      }
+    </script>
+  </head>
+  <body onload="showLogin()">
+    <div id="root"></div>
+  </body>
+</html>

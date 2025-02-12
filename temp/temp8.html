@@ -10,7 +10,14 @@
         let email=document.getElementById("email").value
         let password=document.getElementById("password").value
         let dob=document.getElementById("dob").value
-        data.innerHTML = `${name}, ${email}, ${password}, ${dob}`;
+        //data.innerHTML = `${name}, ${email}, ${password}, ${dob}`;
+        let user={
+          name:name,
+          email:email,
+          password:password,
+          dob:dob
+        }
+        console.log(user)
       }
     </script>
   </head>
