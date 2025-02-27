@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sai Bhaskar - Full Stack Developer</title>
     <style>
-      /* Reset default margin and padding */
+      
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      /* Header styling */
       .row1 {
         display: flex;
         align-items: center;
@@ -43,7 +42,6 @@
         border-radius: 5px;
       }
 
-      /* Main content styling */
       .row2 {
         display: flex;
         align-items: center;
@@ -72,7 +70,6 @@
         margin-bottom: 20px;
       }
 
-      /* Projects section styling */
       .row3 {
         padding: 50px 20px;
         background-color: #f4f4f4;
@@ -106,7 +103,7 @@
     </style>
   </head>
   <body>
-    <!-- Header Section -->
+
     <header class="row1">
       <h1>SAI BHASKAR</h1>
       <nav>
@@ -139,7 +136,7 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+ 
     <section id="row3" class="row3">
       <div class="title">Projects</div>
       <div class="p1">
@@ -153,11 +150,11 @@
       </div>
     </section>
 
-    <!-- GSAP Animation Script -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-      // GSAP Animation for Header
+ 
       gsap.from(".row1", {
         duration: 1,
         y: -100,
@@ -165,7 +162,7 @@
         ease: "power2.out",
       });
 
-      // GSAP Animation for Profile Section
+     
       gsap.from(".profile", {
         duration: 1,
         x: -100,
@@ -174,7 +171,6 @@
         ease: "power2.out",
       });
 
-      // GSAP Animation for Image
       gsap.from(".row2 img", {
         duration: 1,
         x: 100,
@@ -183,7 +179,7 @@
         ease: "power2.out",
       });
 
-      // GSAP Animation for Projects Section
+      
       gsap.from(".row3", {
         scrollTrigger: {
           trigger: ".row3",
@@ -196,7 +192,6 @@
       });
     </script>
 
-    <!-- Smooth Scrolling Script -->
     <script>
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
